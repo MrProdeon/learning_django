@@ -10,7 +10,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        with open("contacts.html", "r", encoding="utf-8") as file:
+        with open("html/contacts.html", "r", encoding="utf-8") as file:
             self.wfile.write(bytes(file.read().encode("utf-8")))
 
     def do_POST(self):
