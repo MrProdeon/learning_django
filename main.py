@@ -20,7 +20,7 @@ class MyServer(BaseHTTPRequestHandler):
         name = data.get('name', [''])[0]
         email = data.get('email', [''])[0]
 
-        print(f"Получены данные: Имя={name}, Email={email}")
+        print(f"Получены данные: Имя: {name}, Email: {email}")
 
         self.send_response(200)
         self.send_header("Content-type", "text/html")
